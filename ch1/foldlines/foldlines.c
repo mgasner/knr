@@ -31,7 +31,10 @@ main()
 					putchar('\n');
 					for (i = 0; i < b; i++)
 						putchar(buffer[i]);
-					n = b;
+					if (c == '\n')
+						n = 0;
+					else
+						n = b;
 					b = 0;
 				}
 			} else {
@@ -50,7 +53,10 @@ main()
 						putchar(buffer[i]);
 						j++;
 					}
-					n = b % LINELENGTH;
+					if (c == '\n')
+						n = 0;
+					else
+						n = b % LINELENGTH;
 					b = 0;
 				}
 			}
